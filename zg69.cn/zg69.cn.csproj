@@ -1,0 +1,1518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{320DAC31-04AB-4E51-8861-FE6367286A08}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>zg69.cn</RootNamespace>
+    <AssemblyName>zg69.cn</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dos.ORM">
+      <HintPath>..\..\69zg\DLL\Dos.ORM.dll</HintPath>
+    </Reference>
+    <Reference Include="Dos.ORM.Sqlite">
+      <HintPath>..\..\69zg\DLL\Dos.ORM.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\69zg\DLL\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\69zg\DLL\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\69zg\DLL\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>..\..\69zg\DLL\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\..\69zg\DLL\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ILController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\T_region.cs" />
+    <Compile Include="Models\T_users.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\zg69.db" />
+    <Content Include="App_Data\GeoLiteCityv6.dat" />
+    <Content Include="App_Data\GeoLiteCity.dat" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\css\bootstrap-theme.min.css" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\css\bootstrap.min.css" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\css\plugins.css" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\css\responsive.css" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\css\style.css" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\1.jpg" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\bg.png" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\feature-1.jpg" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\feature-2.jpg" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\flaticon1.png" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\flaticon2.png" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\flaticon3.png" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\flaticon4.png" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\ftiphone.png" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\ftiphone1.png" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\homebg-.jpg" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\homebg.jpg" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\logo.png" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\monitor.png" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\images\pf1.jpg" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\js\main.js" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\js\modernizr.js" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\js\plugins.js" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\js\vendor\bootstrap.js" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\js\vendor\bootstrap.min.js" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\js\vendor\gmaps.min.js" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\js\vendor\jquery-1.11.2.min.js" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\js\vendor\npm.js" />
+    <Content Include="template\产品\tops_97_Soft-Tech\index.html" />
+    <Content Include="template\产品\tops_97_Soft-Tech\说明.txt" />
+    <Content Include="template\产品推广\tops_44_fame\asset\css\bootstrap-theme.css" />
+    <Content Include="template\产品推广\tops_44_fame\asset\css\bootstrap-theme.min.css" />
+    <Content Include="template\产品推广\tops_44_fame\asset\css\bootstrap.css" />
+    <Content Include="template\产品推广\tops_44_fame\asset\css\bootstrap.min.css" />
+    <Content Include="template\产品推广\tops_44_fame\asset\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="template\产品推广\tops_44_fame\asset\js\bootstrap.js" />
+    <Content Include="template\产品推广\tops_44_fame\asset\js\bootstrap.min.js" />
+    <Content Include="template\产品推广\tops_44_fame\asset\js\npm.js" />
+    <Content Include="template\产品推广\tops_44_fame\css\animate.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\color\blue.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\color\green.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\color\light-blue.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\color\light-green.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\color\light-red.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\color\yellow.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\font-awesome.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\font-awesome.min.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\owl.carousel.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\owl.theme.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\owl.transitions.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\responsive.css" />
+    <Content Include="template\产品推广\tops_44_fame\css\style.css" />
+    <Content Include="template\产品推广\tops_44_fame\fonts\fontawesome-webfont.svg" />
+    <Content Include="template\产品推广\tops_44_fame\images\about-01.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\about-02.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\about-03.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\galaxy.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\header-back.png" />
+    <Content Include="template\产品推广\tops_44_fame\images\header-bg-1.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\logos\aetuts.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\logos\creative-market.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\logos\designmodo.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\logos\envato.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\logos\microlancer.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\logos\themeforest.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\logos\wordpress.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\parallax\bg-01.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\parallax\bg-02.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\parallax\call-to.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\parallax\contact-bg.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\parallax\pricing-bg.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\parallax\testimonial-bg.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\portfolio\img1.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\portfolio\img2.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\portfolio\img3.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\portfolio\img4.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\portfolio\img5.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\portfolio\img6.jpg" />
+    <Content Include="template\产品推广\tops_44_fame\images\team\manage-1.png" />
+    <Content Include="template\产品推广\tops_44_fame\images\team\manage-2.png" />
+    <Content Include="template\产品推广\tops_44_fame\images\team\manage-3.png" />
+    <Content Include="template\产品推广\tops_44_fame\images\team\manage-4.png" />
+    <Content Include="template\产品推广\tops_44_fame\images\testimonial\face_1.png" />
+    <Content Include="template\产品推广\tops_44_fame\images\testimonial\face_2.png" />
+    <Content Include="template\产品推广\tops_44_fame\images\testimonial\face_3.png" />
+    <Content Include="template\产品推广\tops_44_fame\images\testimonial\face_4.png" />
+    <Content Include="template\产品推广\tops_44_fame\index.html" />
+    <Content Include="template\产品推广\tops_44_fame\js\cbpAnimatedHeader.js" />
+    <Content Include="template\产品推广\tops_44_fame\js\classie.js" />
+    <Content Include="template\产品推广\tops_44_fame\js\contact_me.js" />
+    <Content Include="template\产品推广\tops_44_fame\js\count-to.js" />
+    <Content Include="template\产品推广\tops_44_fame\js\jqBootstrapValidation.js" />
+    <Content Include="template\产品推广\tops_44_fame\js\jquery-2.1.1.min.js" />
+    <Content Include="template\产品推广\tops_44_fame\js\jquery.appear.js" />
+    <Content Include="template\产品推广\tops_44_fame\js\jquery.easing.1.3.js" />
+    <Content Include="template\产品推广\tops_44_fame\js\jquery.fitvids.js" />
+    <Content Include="template\产品推广\tops_44_fame\js\modernizr.custom.js" />
+    <Content Include="template\产品推广\tops_44_fame\js\owl.carousel.min.js" />
+    <Content Include="template\产品推广\tops_44_fame\js\script.js" />
+    <Content Include="template\产品推广\tops_44_fame\js\styleswitcher.js" />
+    <Content Include="template\产品推广\tops_44_fame\mail\contact_me.php" />
+    <Content Include="template\产品推广\tops_44_fame\说明.txt" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\bootstrap-theme.css" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\bootstrap-theme.min.css" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\bootstrap.css" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\bootstrap.min.css" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\fontAwesome.css" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\fonts\flexslider-icon.svg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\hero-slider.css" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\lightbox.css" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\owl-carousel.css" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\templatemo-style.css" />
+    <Content Include="template\公司首页\tpmo_506_tinker\fonts\fontawesome-webfont.svg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\about-bg.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\banner_bg.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\blog-bg.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\blog_item_01.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\blog_item_02.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\blog_item_03.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\blog_item_04.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\close.png" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\loading.gif" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\next.png" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\portfolio_big_item_01.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\portfolio_big_item_02.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\portfolio_big_item_03.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\portfolio_big_item_04.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\portfolio_big_item_05.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\portfolio_big_item_06.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\portfolio_item_01.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\portfolio_item_02.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\portfolio_item_03.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\portfolio_item_04.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\portfolio_item_05.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\portfolio_item_06.jpg" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\prev.png" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\service_icon_01.png" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\service_icon_02.png" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\service_icon_03.png" />
+    <Content Include="template\公司首页\tpmo_506_tinker\img\service_icon_04.png" />
+    <Content Include="template\公司首页\tpmo_506_tinker\index.html" />
+    <Content Include="template\公司首页\tpmo_506_tinker\js\main.js" />
+    <Content Include="template\公司首页\tpmo_506_tinker\js\plugins.js" />
+    <Content Include="template\公司首页\tpmo_506_tinker\js\vendor\bootstrap.js" />
+    <Content Include="template\公司首页\tpmo_506_tinker\js\vendor\bootstrap.min.js" />
+    <Content Include="template\公司首页\tpmo_506_tinker\js\vendor\jquery-1.11.2.min.js" />
+    <Content Include="template\公司首页\tpmo_506_tinker\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
+    <Content Include="template\公司首页\tpmo_506_tinker\js\vendor\npm.js" />
+    <Content Include="template\公司首页\说明.txt" />
+    <Content Include="template\商城\amz_02_adp\b.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\css\admin.css" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\css\amazeui.css" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\css\amazeui.flat.css" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\css\amazeui.flat.min.css" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\css\amazeui.min.css" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\css\app.css" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\app-icon72x72%402x.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\examples\admin-chrome.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\examples\admin-firefox.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\examples\admin-ie.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\examples\admin-opera.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\examples\admin-safari.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\examples\adminPage.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\examples\blogPage.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\examples\landing.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\examples\landingPage.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\examples\loginPage.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\examples\sidebarPage.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\favicon.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\i\startup-640x1096.png" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\js\amazeui.ie8polyfill.js" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\js\amazeui.ie8polyfill.min.js" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\js\amazeui.js" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\js\amazeui.min.js" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\js\amazeui.widgets.helper.js" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\js\amazeui.widgets.helper.min.js" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\js\app.js" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\js\handlebars.min.js" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\js\jquery.min.js" />
+    <Content Include="template\商城\amz_02_adp\one\basic\css\demo.css" />
+    <Content Include="template\商城\amz_02_adp\one\basic\images\chongzhi.png" />
+    <Content Include="template\商城\amz_02_adp\one\basic\images\ibar_sprites.png" />
+    <Content Include="template\商城\amz_02_adp\one\basic\images\loading.gif" />
+    <Content Include="template\商城\amz_02_adp\one\basic\images\logo.png" />
+    <Content Include="template\商城\amz_02_adp\one\basic\images\logobar.png" />
+    <Content Include="template\商城\amz_02_adp\one\basic\images\logobig.png" />
+    <Content Include="template\商城\amz_02_adp\one\basic\images\no-img_mid_.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\basic\images\wdsc.png" />
+    <Content Include="template\商城\amz_02_adp\one\basic\images\weixin_code_145.png" />
+    <Content Include="template\商城\amz_02_adp\one\basic\js\jquery-1.7.min.js" />
+    <Content Include="template\商城\amz_02_adp\one\basic\js\jquery-1.9.min.js" />
+    <Content Include="template\商城\amz_02_adp\one\basic\js\quick_links.js" />
+    <Content Include="template\商城\amz_02_adp\one\css\addstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\appstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\bilstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\blogstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\blstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\bostyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\cartstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\cmstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\colstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\cpstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\dlstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\footstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\hmstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\infstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\jsstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\lostyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\newstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\optstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\orstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\personal.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\refstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\seastyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\skin.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\sortstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\stepstyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\style.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\sustyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\css\systyle.css" />
+    <Content Include="template\商城\amz_02_adp\one\frame.html" />
+    <Content Include="template\商城\amz_02_adp\one\home\home.html" />
+    <Content Include="template\商城\amz_02_adp\one\home\home1.html" />
+    <Content Include="template\商城\amz_02_adp\one\home\home3.html" />
+    <Content Include="template\商城\amz_02_adp\one\home\introduction.html" />
+    <Content Include="template\商城\amz_02_adp\one\home\login.html" />
+    <Content Include="template\商城\amz_02_adp\one\home\pay.html" />
+    <Content Include="template\商城\amz_02_adp\one\home\register.html" />
+    <Content Include="template\商城\amz_02_adp\one\home\search.html" />
+    <Content Include="template\商城\amz_02_adp\one\home\shopcart.html" />
+    <Content Include="template\商城\amz_02_adp\one\home\sort.html" />
+    <Content Include="template\商城\amz_02_adp\one\home\success.html" />
+    <Content Include="template\商城\amz_02_adp\one\images\-0-saturn_solar.jpg_220x220.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\0-item_pic.jpg_220x220.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\01.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\01_mid.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\01_small.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\02.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\02_mid.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\02_small.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\03.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\03_mid.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\03_small.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\1-item_pic.jpg_220x220.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\1.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\10.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\11.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\1_160x160.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\2.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\2016.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\3.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\3CoOkxrFOP.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\4.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\5.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\556.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\557.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\559.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\566.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\566fda5cN4b8a1675.gif" />
+    <Content Include="template\商城\amz_02_adp\one\images\6.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\62988.jpg_80x80.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\65.jpg_120x120xz.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\7.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\72h.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\8.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\88.jpg_120x120xz.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\9.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\act1.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\act2.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\act3.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\activity.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\activity1.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\activity2.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\activity3.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\ad1.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\ad2.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\ad3.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\ad4.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\ad5.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\ad6.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\ad7.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\ad8.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\addbg.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\addicon.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\addicon1.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\addicon2.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\advTip.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\bamboo.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\bamboo.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\big.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\blog01.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\blog02.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\blog03.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\blog04.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\blog05.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\blog06.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\blog07.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\blog08.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\blog09.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\bonus.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\browse1.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\cake.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\cake.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\candy.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\candy.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\cardbg.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\checkbox.gif" />
+    <Content Include="template\商城\amz_02_adp\one\images\chocolate.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\chocolate.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\chongzhi.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\clockbg.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\close.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\combo.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\comment.jpg_400x400.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\comment.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\cookies.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\cookies.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\coupon.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\coupon2015.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\coupon20150805.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\couponli.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\cp.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\cp2.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\day-to.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\extra.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\fish.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\fish.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\getAvatar.do.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\gift_intro_bg.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\gift_stamp_1.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\gift_stamp_2.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\gift_stamp_21.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\gift_stamp_3.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\gift_stamp_31.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\header-bg.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\header-bg1.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\huismall.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\hwbn40x40.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\ibar_sprites.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\icon-sale.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\iconbig.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\iconfont-bad.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\iconfont-badon.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\iconfont-evaluate.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\iconfont-good.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\iconfont-middle.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\iconsmall.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\iconsmall0.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\iconsmall1.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\iconsmall2.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\iconsmall3.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\image.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\imgsearch1.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\index_ico_png32.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\item-pic.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\kouhong.jpg_80x80.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\kuaidi.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\list1.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\listsmall1.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\loading.gif" />
+    <Content Include="template\商城\amz_02_adp\one\images\logo.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\logo1.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\logobig.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\logobig1.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\logobig2.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\mansmall.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\mask.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\meat.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\meat.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\moneysmall.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\mygift_bg.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\navce.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\navsmall.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\no-img_mid_.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\nut.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\nut.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\package.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\package.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\pay.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\peraddbg.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\peraddress.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\peraddressbg.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\receive.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\refund.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\return-process-cd.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\row1.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\row2.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\row3.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\row4.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\sale-t.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\sale-t_clock.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\sale1.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\sale2.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\sale3.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\scoll1.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\scoll2.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\send.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\side.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\songzi.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\sprite.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\sys_item_selected.gif" />
+    <Content Include="template\商城\amz_02_adp\one\images\T13iv.XiFdXXa94Hfd-32-32.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\TB102.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\TB1SSK7JpXXXXXCXXXXXXXXXXXX-800-600.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\TB1_pic.jpg_200x200.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\tea.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\tea.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\TJ.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\tj.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\tj1.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\TJ2.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\tj2.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\tw1.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\tw2.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\tw3.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\tw4.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\tw5.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\tw6.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\tw7.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\wallet.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\wangyin.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\wdsc.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\weixin_code_145.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\weizhifu.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\YXARdXxj5.png" />
+    <Content Include="template\商城\amz_02_adp\one\images\zhifubao.jpg" />
+    <Content Include="template\商城\amz_02_adp\one\images\图标.png" />
+    <Content Include="template\商城\amz_02_adp\one\js\address.js" />
+    <Content Include="template\商城\amz_02_adp\one\js\jquery-1.7.2.min.js" />
+    <Content Include="template\商城\amz_02_adp\one\js\jquery.flexslider.js" />
+    <Content Include="template\商城\amz_02_adp\one\js\jquery.imagezoom.min.js" />
+    <Content Include="template\商城\amz_02_adp\one\js\jquery.js" />
+    <Content Include="template\商城\amz_02_adp\one\js\list.js" />
+    <Content Include="template\商城\amz_02_adp\one\js\script.js" />
+    <Content Include="template\商城\amz_02_adp\one\options.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\address.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\bill.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\billlist.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\bindphone.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\blog.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\bonus.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\change.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\collection.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\comment.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\commentlist.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\coupon.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\email.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\foot.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\idcard.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\index.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\information.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\logistics.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\news.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\order.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\orderinfo.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\password.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\question.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\record.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\refund.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\safety.html" />
+    <Content Include="template\商城\amz_02_adp\one\person\setpay.html" />
+    <Content Include="template\商城\amz_02_adp\s.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\css\admin.css" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\css\amazeui.css" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\css\amazeui.flat.css" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\css\amazeui.flat.min.css" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\css\amazeui.min.css" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\css\app.css" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\app-icon72x72%402x.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\examples\admin-chrome.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\examples\admin-firefox.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\examples\admin-ie.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\examples\admin-opera.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\examples\admin-safari.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\examples\adminPage.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\examples\blogPage.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\examples\landing.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\examples\landingPage.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\examples\loginPage.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\examples\sidebarPage.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\favicon.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\i\startup-640x1096.png" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\js\amazeui.ie8polyfill.js" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\js\amazeui.ie8polyfill.min.js" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\js\amazeui.js" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\js\amazeui.min.js" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\js\amazeui.widgets.helper.js" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\js\amazeui.widgets.helper.min.js" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\js\app.js" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\js\handlebars.min.js" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\js\jquery.min.js" />
+    <Content Include="template\商城\amz_02_adp\two\basic\css\demo.css" />
+    <Content Include="template\商城\amz_02_adp\two\basic\images\chongzhi.png" />
+    <Content Include="template\商城\amz_02_adp\two\basic\images\ibar_sprites.png" />
+    <Content Include="template\商城\amz_02_adp\two\basic\images\loading.gif" />
+    <Content Include="template\商城\amz_02_adp\two\basic\images\no-img_mid_.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\basic\images\wdsc.png" />
+    <Content Include="template\商城\amz_02_adp\two\basic\images\weixin_code_145.png" />
+    <Content Include="template\商城\amz_02_adp\two\basic\js\jquery-1.7.min.js" />
+    <Content Include="template\商城\amz_02_adp\two\basic\js\jquery-1.9.min.js" />
+    <Content Include="template\商城\amz_02_adp\two\basic\js\quick_links.js" />
+    <Content Include="template\商城\amz_02_adp\two\css\addstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\appstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\bilstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\blogstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\blstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\bostyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\cartstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\cmstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\colstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\cpstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\dlstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\footstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\hmstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\infstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\jsstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\lostyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\newstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\optstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\orstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\personal.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\point.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\refstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\seastyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\skin.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\sortstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\stepstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\style.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\sustyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\vipstyle.css" />
+    <Content Include="template\商城\amz_02_adp\two\css\wallet.css" />
+    <Content Include="template\商城\amz_02_adp\two\frame.html" />
+    <Content Include="template\商城\amz_02_adp\two\home\home2.html" />
+    <Content Include="template\商城\amz_02_adp\two\home\home3.html" />
+    <Content Include="template\商城\amz_02_adp\two\home\introduction.html" />
+    <Content Include="template\商城\amz_02_adp\two\home\login.html" />
+    <Content Include="template\商城\amz_02_adp\two\home\pay.html" />
+    <Content Include="template\商城\amz_02_adp\two\home\register.html" />
+    <Content Include="template\商城\amz_02_adp\two\home\search.html" />
+    <Content Include="template\商城\amz_02_adp\two\home\shopcart.html" />
+    <Content Include="template\商城\amz_02_adp\two\home\sort.html" />
+    <Content Include="template\商城\amz_02_adp\two\home\success.html" />
+    <Content Include="template\商城\amz_02_adp\two\images\-0-saturn_solar.jpg_220x220.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\0-item_pic.jpg_220x220.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\01.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\01_mid.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\01_small.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\02.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\02_mid.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\02_small.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\03.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\03_mid.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\03_small.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\1-item_pic.jpg_220x220.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\1.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\10.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\11.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\111.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\1_160x160.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\2.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\2016.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\222.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\3.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\333.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\3CoOkxrFOP.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\4.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\5.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\556.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\557.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\559.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\566.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\566fda5cN4b8a1675.gif" />
+    <Content Include="template\商城\amz_02_adp\two\images\6.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\62988.jpg_80x80.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\65.jpg_120x120xz.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\666.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\7.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\72h.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\8.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\88.jpg_120x120xz.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\9.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\act1.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\act2.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\act3.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\activity.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\activity1.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\activity2.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\activity3.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\ad1.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\ad2.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\ad3.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\ad4.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\ad5.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\ad6.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\ad7.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\ad8.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\addbg.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\addicon.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\addicon1.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\addicon2.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\advTip.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\Balance.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\bamboo.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\bamboo.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\bankjh.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\bankns.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\big.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\blog01.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\blog02.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\blog03.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\blog04.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\blog05.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\blog06.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\blog07.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\blog08.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\blog09.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\bonus.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\browse1.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\BxJk6.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\cake.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\cake.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\candy.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\candy.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\cardbg.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\cardbg.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\cardtype.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\checkbox.gif" />
+    <Content Include="template\商城\amz_02_adp\two\images\chocolate.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\chocolate.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\chongzhi.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\clockbg.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\close.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\combo.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\combo1.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\combo2.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\combo3.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\comment.jpg_400x400.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\comment.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\cookies.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\cookies.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\coupon-bg.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\coupon.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\coupon2015.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\coupon20150805.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\couponli.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\cp.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\cp2.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\day-to.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\extra.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\EZA27501.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\fish.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\fish.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\getAvatar.do.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\gift_intro_bg.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\gift_stamp_1.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\gift_stamp_2.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\gift_stamp_21.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\gift_stamp_3.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\gift_stamp_31.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\header-bg.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\header-bg1.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\heart.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\huismall.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\hwbn40x40.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\Hxcag60.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\ibar_sprites.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\icon-sale.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\iconbig.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\iconfont-bad.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\iconfont-badon.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\iconfont-evaluate.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\iconfont-good.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\iconfont-middle.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\iconsmall.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\iconsmall0.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\iconsmall1.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\iconsmall2.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\iconsmall3.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\icon_bar.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\icon_bg.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\icon_progress_24.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\image.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\imgBox.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\imgsearch1.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\index_ico_png32.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\item-pic.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\kouhong.jpg_80x80.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\kuaidi.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\list1.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\listsmall1.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\loading.gif" />
+    <Content Include="template\商城\amz_02_adp\two\images\logo.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\logo1.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\logobig.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\logobig1.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\logobig2.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\mansmall.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\mask.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\meat.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\meat.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\moneysmall.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\mygift_bg.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\navce.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\navsmall.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\no-img_mid_.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\nut.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\nut.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\package.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\package.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\pay.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\peraddbg.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\peraddress.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\peraddressbg.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\pig.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\profit.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\receive.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\refund.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\return-process-cd.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\row1.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\row2.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\row3.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\row4.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\safe.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\safe_bg.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\sale-t.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\sale-t_clock.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\sale1.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\sale2.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\sale3.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\scoll1.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\scoll2.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\send.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\shopping.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\side.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\songzi.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\sprite.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\sys_item_selected.gif" />
+    <Content Include="template\商城\amz_02_adp\two\images\T13iv.XiFdXXa94Hfd-32-32.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\TB102.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\TB1SSK7JpXXXXXCXXXXXXXXXXXX-800-600.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\TB1_pic.jpg_200x200.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\tea.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\tea.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\TJ.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\tj.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\tj1.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\TJ2.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\tj2.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\tw1.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\tw2.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\tw3.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\tw4.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\tw5.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\tw6.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\tw7.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\u5.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\u6.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\wallet.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\wangyin.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\wdsc.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\weixin_code_145.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\weizhifu.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\youzi.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\YXARdXxj5.png" />
+    <Content Include="template\商城\amz_02_adp\two\images\zhifubao.jpg" />
+    <Content Include="template\商城\amz_02_adp\two\images\图标.png" />
+    <Content Include="template\商城\amz_02_adp\two\js\address.js" />
+    <Content Include="template\商城\amz_02_adp\two\js\jquery-1.7.2.min.js" />
+    <Content Include="template\商城\amz_02_adp\two\js\jquery.flexslider.js" />
+    <Content Include="template\商城\amz_02_adp\two\js\jquery.imagezoom.min.js" />
+    <Content Include="template\商城\amz_02_adp\two\js\jquery.js" />
+    <Content Include="template\商城\amz_02_adp\two\js\list.js" />
+    <Content Include="template\商城\amz_02_adp\two\js\script.js" />
+    <Content Include="template\商城\amz_02_adp\two\person\address.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\bill.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\billlist.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\bindphone.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\blog.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\bonus.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\cardlist.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\cardmethod.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\change.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\collection.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\comment.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\commentlist.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\consultation.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\coupon.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\email.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\foot.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\idcard.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\index.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\information.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\logistics.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\news.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\order.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\orderinfo.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\password.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\pointnew.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\points.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\question.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\record.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\refund.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\safety.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\setpay.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\suggest.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\wallet.html" />
+    <Content Include="template\商城\amz_02_adp\two\person\walletlist.html" />
+    <Content Include="template\商城\amz_02_adp\说明.txt" />
+    <Content Include="template\外包\sbtp_28_bbd\css\animate.css" />
+    <Content Include="template\外包\sbtp_28_bbd\css\preloader.css" />
+    <Content Include="template\外包\sbtp_28_bbd\css\responsive.css" />
+    <Content Include="template\外包\sbtp_28_bbd\css\simple-line-icons.css" />
+    <Content Include="template\外包\sbtp_28_bbd\css\style.css" />
+    <Content Include="template\外包\sbtp_28_bbd\fonts\Simple-Line-Icons.dev.svg" />
+    <Content Include="template\外包\sbtp_28_bbd\fonts\Simple-Line-Icons.svg" />
+    <Content Include="template\外包\sbtp_28_bbd\img\after_effects.svg" />
+    <Content Include="template\外包\sbtp_28_bbd\img\amazon.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\apple-touch-icon-ipad-retina.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\apple-touch-icon-ipad.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\apple-touch-icon-iphone-retina.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\apple-touch-icon-iphone.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\bill.jpg" />
+    <Content Include="template\外包\sbtp_28_bbd\img\curb.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\dan.jpg" />
+    <Content Include="template\外包\sbtp_28_bbd\img\elance-odesk.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\eric.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\favicon.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\flash.svg" />
+    <Content Include="template\外包\sbtp_28_bbd\img\hero-img.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\icon.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\illustrator.svg" />
+    <Content Include="template\外包\sbtp_28_bbd\img\indesign.svg" />
+    <Content Include="template\外包\sbtp_28_bbd\img\payoneer.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\photoshop.svg" />
+    <Content Include="template\外包\sbtp_28_bbd\img\ramil.jpg" />
+    <Content Include="template\外包\sbtp_28_bbd\img\s1.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\s2.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\s3.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\s4.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\s5.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\s6.png" />
+    <Content Include="template\外包\sbtp_28_bbd\img\trianglify-background.svg" />
+    <Content Include="template\外包\sbtp_28_bbd\img\user.png" />
+    <Content Include="template\外包\sbtp_28_bbd\index.html" />
+    <Content Include="template\外包\sbtp_28_bbd\js\drifolio.js" />
+    <Content Include="template\外包\sbtp_28_bbd\js\jquery.easing.min.js" />
+    <Content Include="template\外包\sbtp_28_bbd\js\jquery.jribbble-1.0.1.ugly.js" />
+    <Content Include="template\外包\sbtp_28_bbd\js\jquery.nicescroll.min.js" />
+    <Content Include="template\外包\sbtp_28_bbd\js\wow.min.js" />
+    <Content Include="template\外包\sbtp_28_bbd\说明.txt" />
+    <Content Include="template\婚礼\frtp_5_photography\css\animate.min.css" />
+    <Content Include="template\婚礼\frtp_5_photography\css\bootstrap.min.css" />
+    <Content Include="template\婚礼\frtp_5_photography\css\font-awesome.min.css" />
+    <Content Include="template\婚礼\frtp_5_photography\css\jPushMenu.css" />
+    <Content Include="template\婚礼\frtp_5_photography\css\jquery.bxslider.css" />
+    <Content Include="template\婚礼\frtp_5_photography\css\lightbox.css" />
+    <Content Include="template\婚礼\frtp_5_photography\css\main.css" />
+    <Content Include="template\婚礼\frtp_5_photography\css\responsive.css" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\android-chrome-192x192.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\apple-touch-icon-114x114.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\apple-touch-icon-120x120.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\apple-touch-icon-144x144.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\apple-touch-icon-152x152.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\apple-touch-icon-180x180.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\apple-touch-icon-57x57.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\apple-touch-icon-60x60.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\apple-touch-icon-72x72.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\apple-touch-icon-76x76.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\browserconfig.xml" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\favicon-16x16.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\favicon-32x32.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\favicon-96x96.png" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\favicon.ico" />
+    <Content Include="template\婚礼\frtp_5_photography\fonts\fontawesome-webfonte0a5.svg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\bg\01.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\bg\02.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\bg\03.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\bg\04.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\blog\01.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\blog\02.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\blog\03.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\clients\logo-01.png" />
+    <Content Include="template\婚礼\frtp_5_photography\img\clients\logo-02.png" />
+    <Content Include="template\婚礼\frtp_5_photography\img\clients\logo-03.png" />
+    <Content Include="template\婚礼\frtp_5_photography\img\clients\logo-04.png" />
+    <Content Include="template\婚礼\frtp_5_photography\img\clients\logo-05.png" />
+    <Content Include="template\婚礼\frtp_5_photography\img\clients\logo-06.png" />
+    <Content Include="template\婚礼\frtp_5_photography\img\clients\logo-07.png" />
+    <Content Include="template\婚礼\frtp_5_photography\img\clients\logo-08.png" />
+    <Content Include="template\婚礼\frtp_5_photography\img\lightbox\close.png" />
+    <Content Include="template\婚礼\frtp_5_photography\img\lightbox\loading.gif" />
+    <Content Include="template\婚礼\frtp_5_photography\img\lightbox\next.png" />
+    <Content Include="template\婚礼\frtp_5_photography\img\lightbox\prev.png" />
+    <Content Include="template\婚礼\frtp_5_photography\img\logo.png" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\01.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\02.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\03.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\04.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\05.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\06.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\07.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\08.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\main-01.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\main-02.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\main-03.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\main-04.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\main-05.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\main-06.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\main-07.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\portfolio\main-08.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\slider\01.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\slider\02.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\slider\03.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\team\01.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\team\02.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\team\03.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\img\team\04.jpg" />
+    <Content Include="template\婚礼\frtp_5_photography\index.html" />
+    <Content Include="template\婚礼\frtp_5_photography\js\app.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\bootstrap.min.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\gmaps.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\init-map.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\jPushMenu.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\jquery.bxslider.min.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\jquery.counterup.min.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\jquery.inview.min.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\jquery.isotope.min.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\jquery.min.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\jquery.nav.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\lightbox.min.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\loader.min.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\mousescroll.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\preloader.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\smoothscroll.js" />
+    <Content Include="template\婚礼\frtp_5_photography\js\wow.min.js" />
+    <Content Include="template\婚礼\说明.txt" />
+    <Content Include="template\瑜伽\dntp_6_czv\about.html" />
+    <Content Include="template\瑜伽\dntp_6_czv\contact.html" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\bootstrap-select.min.css" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\bootstrap.min.css" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\fontawesome\css\font-awesome.min.css" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\magnific-popup.css" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\owl.carousel.css" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\skin\skin-1.css" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\style.css" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\switcher.css" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\templete.css" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\background\bg1.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\background\bg4.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\gallery\img1.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\gallery\img2.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\gallery\img3.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\gallery\img4.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\gallery\img5.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\gallery\pic1.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\gallery\pic2.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\gallery\pic3.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\gallery\pic4.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\gallery\pic5.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\gallery\pic6.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\logo.png" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\main-slider\slide1.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\main-slider\slide2.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\main-slider\slide3.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\our-services\pic1.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\our-services\pic2.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\our-services\pic3.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\our-services\pic4.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\our-team\pic1.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\our-team\pic2.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\our-team\pic3.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\our-work\pic1.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\our-work\pic2.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\our-work\pic3.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\product\pic1.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\product\pic2.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\product\pic3.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\product\pic4.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\product\pic5.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\product\pic6.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\product\pic7.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\service-image.png" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\testimonials\pic1.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\testimonials\pic2.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\images\testimonials\pic3.jpg" />
+    <Content Include="template\瑜伽\dntp_6_czv\index.html" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\bootstrap-select.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\bootstrap.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\counterup.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\custom.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\dz.ajax.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\dz.carousel.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\html5shiv.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\imagesloaded.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\jquery.bootstrap-touchspin.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\jquery.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\magnific-popup.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\masonry-3.1.4.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\masonry.filter.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\owl.carousel.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\respond.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\rev.slider.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\switcher.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\js\waypoints-min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\assets\coloredbg.png" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\assets\gridtile.png" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\assets\gridtile_3x3.png" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\assets\gridtile_3x3_white.png" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\assets\gridtile_white.png" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\assets\loader.gif" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\css\navigation.css" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\css\settings.css" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\js\extensions\revolution.extension.actions.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\js\extensions\revolution.extension.carousel.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\js\extensions\revolution.extension.kenburn.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\js\extensions\revolution.extension.layeranimation.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\js\extensions\revolution.extension.migration.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\js\extensions\revolution.extension.navigation.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\js\extensions\revolution.extension.parallax.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\js\extensions\revolution.extension.slideanims.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\js\extensions\revolution.extension.video.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\js\jquery.themepunch.tools.min.js" />
+    <Content Include="template\瑜伽\dntp_6_czv\product-details.html" />
+    <Content Include="template\瑜伽\dntp_6_czv\product.html" />
+    <Content Include="template\瑜伽\dntp_6_czv\services.html" />
+    <Content Include="template\瑜伽\dntp_6_czv\说明.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="template\产品\tops_97_Soft-Tech\3000套网站模板免费拥有.url" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\css\bootstrap-theme.css.map" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\css\bootstrap.css.map" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\FontAwesome.otf" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="template\产品\tops_97_Soft-Tech\找网站模板就上【模板之家】cssMoban.com.url" />
+    <Content Include="template\产品推广\tops_44_fame\3000套网站模板免费拥有.url" />
+    <Content Include="template\产品推广\tops_44_fame\asset\css\bootstrap-theme.css.map" />
+    <Content Include="template\产品推广\tops_44_fame\asset\css\bootstrap.css.map" />
+    <Content Include="template\产品推广\tops_44_fame\asset\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="template\产品推广\tops_44_fame\asset\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="template\产品推广\tops_44_fame\asset\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="template\产品推广\tops_44_fame\fonts\fontawesome-webfont.eot" />
+    <Content Include="template\产品推广\tops_44_fame\fonts\fontawesome-webfont.ttf" />
+    <Content Include="template\产品推广\tops_44_fame\fonts\fontawesome-webfont.woff" />
+    <Content Include="template\产品推广\tops_44_fame\fonts\FontAwesome.otf" />
+    <Content Include="template\产品推广\tops_44_fame\找网站模板就上【模板之家】cssMoban.com.url" />
+    <Content Include="template\公司首页\3000套网站模板免费拥有.url" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\bootstrap-theme.css.map" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\bootstrap.css.map" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\fonts\flexslider-icon.eot" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\fonts\flexslider-icon.ttf" />
+    <Content Include="template\公司首页\tpmo_506_tinker\css\fonts\flexslider-icon.woff" />
+    <Content Include="template\公司首页\tpmo_506_tinker\fonts\fontawesome-webfont.eot" />
+    <Content Include="template\公司首页\tpmo_506_tinker\fonts\fontawesome-webfont.ttf" />
+    <Content Include="template\公司首页\tpmo_506_tinker\fonts\fontawesome-webfont.woff" />
+    <Content Include="template\公司首页\tpmo_506_tinker\fonts\fontawesome-webfont.woff2" />
+    <Content Include="template\公司首页\tpmo_506_tinker\fonts\FontAwesome.otf" />
+    <Content Include="template\公司首页\tpmo_506_tinker\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="template\公司首页\tpmo_506_tinker\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="template\公司首页\tpmo_506_tinker\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="template\公司首页\找网站模板就上【模板之家】cssMoban.com.url" />
+    <Content Include="template\商城\3000套网站模板免费拥有.url" />
+    <Content Include="template\商城\amz_02_adp\.project" />
+    <Content Include="template\商城\amz_02_adp\one\.project" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\fonts\FontAwesome.otf" />
+    <Content Include="template\商城\amz_02_adp\two\.project" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="template\商城\amz_02_adp\two\AmazeUI-2.4.2\assets\fonts\FontAwesome.otf" />
+    <Content Include="template\商城\amz_02_adp\找网站模板就上【模板之家】cssMoban.com.url" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\COMMIT_EDITMSG" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\config" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\FETCH_HEAD" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\HEAD" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\index" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\logs\HEAD" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\logs\refs\heads\master" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\logs\refs\remotes\origin\gh-pages" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\logs\refs\remotes\origin\master" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\00\48e464ed474fbba8923a8267bdcc2920b83ac4" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\02\fdc6d565d4213365a132ef8b1dd5461d642953" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\03\068001c1efe23b14762548b435d1bb357d871d" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\04\40eeccd9ae3bea7355d2baf96451011c948d2f" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\09\665e343f8a074f685da0e33815ac67ae81527c" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\11\4be522b759dbf6c225c7150c34605320a1fbf2" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\12\a4288a5e373eb93743a9dac74d7972a771d6ca" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\14\7049eaf4bb164b5944e5aba305136a9185448f" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\19\fb9c1d84d8c9e7125dd81809ee1ec7b2a0f5ec" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\1c\0e80dfc743d5146b49a62c4b1c89c9446dd6a8" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\1e\1c69c1fa16cee9f7e7b631580ada0e72ef086c" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\21\24a96db504be739cdc19b7471105f5981d6aa6" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\21\94f1f87ffb06e2664e4e56e8656060967e4f9f" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\23\2c8ff3f1d597a4c7fbaa9611f6fd47df57c946" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\25\6854f59caaa41e155a7560183214a7f85d32fd" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\29\cbae5501a627672b53138ed946d2b605baeab8" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\2f\01de8b0067695377bd081dbe5241b37c9856d6" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\30\531a96071161e2e37f481ede9676aec0b76ad6" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\32\10621ae6e13ec809c3dcfae6d71b05ee8d575a" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\33\cc0bad3fd1737190fa609965e2a27c94d1066e" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\36\3a15613a7bcc6fb58932d3ffffafc2e614c5a6" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\36\54d56d900db07f93929ef29950c84d9eb0b0d0" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\36\a38995a11a8f0bc06d62dae2f4295049e8cd57" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\38\3e0dd5f9f37475069c847c4acd5d39cb1488a5" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\3d\f04dc274bdf0b986ed9df663fd1068a66d2121" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\46\19473d40febea5b65e5e75dc406c2fd37475f8" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\48\f02a150a86fad8efb7d2f9e68338ba723f5ec6" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\49\d101f7e1e8ec6b7a0f22c132bdfbc2dab29b29" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\50\416f31897c642c3637da9cae7f5144e9fdb33b" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\50\df1e47dcfb368bb5b39cbe04e2d3f50ee5d829" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\50\f47fc7da5845e487c538d186053055b5012e5d" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\51\27913f43f745caa804696ee66b34695ebd9a3b" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\52\81abd14cd7b2b65ee292b31b1f4e9f44a9b331" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\57\d46a2947c090a5e17c717d4a7a36e8222333b7" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\59\7cd85bbfaa7a6bdace06c9914e282e44e726d5" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\5b\5fdde00d1bf5ee75d1b66764ea706a20bcd9df" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\5f\5b0b513784fbdebcae842d3611aad1c8267300" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\62\07525e704d792a027b0c4c11f117519cb44076" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\62\e526e00c8f1e9da32e6155bc35412212b840d1" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\6c\9f7c51b6274a9c70ae6f1cbd2194532a7673d7" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\70\0b3046d0622387b39f9c6213202206d9dfc1fc" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\71\c5e45ecfa83f00f28864aac45789f76c322853" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\7b\278ef84d613218f085a7f96e3ad35fa1b98ae0" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\7f\3bac5fff8d519e68718c5514b555ce4f0b8e51" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\84\01470d3c16a407e2e105438b1ac11d119eb913" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\85\7cc570d00a5c68a1b6b9c9883d6624e9ed3c91" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\87\7865e7df456bc27fd53a8c1e3eef28ac242563" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\87\a40ca716dad71fa07307fc4db974ad992efcf2" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\94\a7cdee74e0cc0e0e01b4fdb0a1ee02663f98f1" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\97\6c97174b94ee5233e7ca7ab4a0cc39a8d0eb40" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\9a\ced60cd94ddec6ba3bd336eded769ab9216e50" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\9c\368f1e27cd2ad16906fab025f8a1bce8b3f3ff" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\a5\3a6c8d4e6eaf77f19d4147abc7d4caa4e525e9" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\a7\b332e99cb0ccba7d34f549713f72807697e7c7" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\a9\368284f37d5f5f0b28de4dec872767fd59150f" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\a9\aabad4b7d155bd010c1419a1e57edf9ace5ea4" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\ac\c73a4d24b154e4b9ed0a72cc4bb2d362ff6a9b" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\b3\ade591c6bf680e46f82041afb846c77ec34865" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\b6\738f9b686d94348e5352b91bf78fd97e0ad5c8" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\b8\023ab3a48a835d82127059a4f560a4c8988b49" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\bf\80b4c8d589f011fd4054ee8dcb4eb66dc8562f" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\c0\123dfdb3c013ed747e68c134d8bd66c52cfba5" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\c0\23c0cd75e4f650814bc13791486f0b3595bb38" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\c3\c6013468428e1f7958e524d20c2b82da4d1b2c" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\c3\ee0fa3cc859b234425d072f82ce91928bd962e" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\c4\aa9b292f765cd13aff68004e409f48153de4df" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\c6\a6452d249f902a80b0775bf01352cbca6f284b" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\cc\3660a842c9e1b5cf236c392418e0c29011cc07" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\d2\58f623388e171cac9fcf1e25e91a0b3cdbd885" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\d4\4dbd9a859c569900d0ce876e79671096345a76" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\d8\a4b3a30d7daafbecf5b1fa8fd04072e9ea4fa4" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\d8\cc62d7bc37c4e2394696ceb3bd7cc5ab19a06a" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\d9\f920651ee37a33dec326c80a582d7deb6dbc82" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\da\0d72423df86798210b2b7ec3e1df349336fcaa" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\da\cf2e1861be0377092a7fb9a6779b11b837241f" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\dc\d40a4ffcfe2951cbad914fd15ae8c46184b69d" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\e2\7396f24f74c9236c878570f8dd6bfab733c7f1" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\e3\38f26b79887fca38b2db72efbf2066e2b30547" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\e3\5ce83b180f8c083a0ad57275ea8bc64ff8da27" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\e4\3dd17faeba188981c33a164eff3a6686365ab9" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\e5\beb280b686e3ba8f9ca92a8f7b71e003196298" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\e6\0e3d5bb41eac21546fd9ce4cf35f124ee70529" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\e6\2a08c940ff2c555b3b51fadd470f3add83f973" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\e7\304e5036dbc82b8359fa3ac433baae087e6387" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\e7\64efbf5f68f6246870cdf91fe9ea7caff8f032" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\e7\b114fe7f96188f58444aebbdb64b8ee5f05448" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\e9\0bd187b569bad72315b12dadda313213840bda" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\e9\7414a70041821d83e05670b1f37557af70741b" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\f4\ae4b2018cc21fc34c8228731bb2bb39ca966b3" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\f6\1e602e863cb1322cdf8edd8eba7310092342d1" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\f7\84ce8f691bec8f353de3075907e91cf9b2c9e8" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\f8\4023a81e23b7a3b5436ec3ee4bc386c015dd1e" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\fa\216b6cf76c9ceeafae9688ae4d2fa5ac37d622" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\fb\a8e439312b490a6ff5ad0f1c0c9d47836e5ac9" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\objects\fe\1b05ddef1861acd5ed3d8260755bed3e3da676" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\ORIG_HEAD" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\refs\heads\master" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\refs\remotes\origin\gh-pages" />
+    <Content Include="template\外包\sbtp_28_bbd\.git\refs\remotes\origin\master" />
+    <Content Include="template\外包\sbtp_28_bbd\3000套网站模板免费拥有.url" />
+    <Content Include="template\外包\sbtp_28_bbd\fonts\Simple-Line-Icons.eot" />
+    <Content Include="template\外包\sbtp_28_bbd\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="template\外包\sbtp_28_bbd\fonts\Simple-Line-Icons.woff" />
+    <Content Include="template\外包\sbtp_28_bbd\img\.DS_Store" />
+    <Content Include="template\外包\sbtp_28_bbd\找网站模板就上【模板之家】cssMoban.com.url" />
+    <Content Include="template\婚礼\3000套网站模板免费拥有.url" />
+    <Content Include="template\婚礼\frtp_5_photography\favicons\manifest.json" />
+    <Content Include="template\婚礼\frtp_5_photography\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="template\婚礼\frtp_5_photography\fonts\fontawesome-webfonte0a5.eot" />
+    <Content Include="template\婚礼\frtp_5_photography\fonts\fontawesome-webfonte0a5.ttf" />
+    <Content Include="template\婚礼\frtp_5_photography\fonts\fontawesome-webfonte0a5.woff" />
+    <Content Include="template\婚礼\frtp_5_photography\fonts\fontawesome-webfonte0a5.woff2" />
+    <Content Include="template\婚礼\找网站模板就上【模板之家】cssMoban.com.url" />
+    <Content Include="template\瑜伽\dntp_6_czv\3000套网站模板免费拥有.url" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="template\瑜伽\dntp_6_czv\css\fontawesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="template\瑜伽\dntp_6_czv\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="template\瑜伽\dntp_6_czv\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="template\瑜伽\dntp_6_czv\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="template\瑜伽\dntp_6_czv\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\fonts\revicons\revicons.eot" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\fonts\revicons\revicons.ttf" />
+    <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\fonts\revicons\revicons.woff" />
+    <Content Include="template\瑜伽\dntp_6_czv\找网站模板就上【模板之家】cssMoban.com.url" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="template\外包\sbtp_28_bbd\.git\media\objects\" />
+    <Folder Include="template\外包\sbtp_28_bbd\.git\media\tmp\" />
+    <Folder Include="template\外包\sbtp_28_bbd\.git\objects\info\" />
+    <Folder Include="template\外包\sbtp_28_bbd\.git\objects\pack\" />
+    <Folder Include="template\外包\sbtp_28_bbd\.git\refs\tags\" />
+    <Folder Include="Views\IL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\69zg\69zg.Common\69zg.Common.csproj">
+      <Project>{1a1a3e54-b906-477c-9a9d-aa518b292a68}</Project>
+      <Name>69zg.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\69zg\69zg.DataContent\69zg.DataContent.csproj">
+      <Project>{67a5d3f3-6146-42fb-92a7-485f52a2db65}</Project>
+      <Name>69zg.DataContent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\69zg\69zg.Filter\69zg.Filter.csproj">
+      <Project>{d0cf4310-6f59-4620-a207-455e17d86c75}</Project>
+      <Name>69zg.Filter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3868</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/zg69.cn</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
