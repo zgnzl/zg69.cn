@@ -173,6 +173,14 @@ namespace ZG69.Model
 
 		#region Method
 		/// <summary>
+		/// 获取实体中的主键列
+		/// </summary>
+		public override Field[] GetPrimaryKeyFields()
+		{
+			return new Field[] {
+				_.ID};
+		}
+		/// <summary>
 		/// 获取列信息
 		/// </summary>
 		public override Field[] GetFields()

@@ -169,17 +169,55 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\T_leavewords.cs" />
     <Compile Include="Models\T_region.cs" />
     <Compile Include="Models\T_users.cs" />
+    <Compile Include="Models\T_visitor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fontAwesome.css" />
+    <Content Include="Content\hero-slider.css" />
+    <Content Include="Content\lightbox.css" />
+    <Content Include="Content\owl-carousel.css" />
+    <Content Include="Content\templatemo-style.css" />
+    <Content Include="Content\zeroModal.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\about-bg.jpg" />
+    <Content Include="img\banner_bg.jpg" />
+    <Content Include="img\blog-bg.jpg" />
+    <Content Include="img\blog_item_01.jpg" />
+    <Content Include="img\blog_item_02.jpg" />
+    <Content Include="img\blog_item_03.jpg" />
+    <Content Include="img\blog_item_04.jpg" />
+    <Content Include="img\close.png" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\next.png" />
+    <Content Include="img\portfolio_big_item_01.jpg" />
+    <Content Include="img\portfolio_big_item_02.jpg" />
+    <Content Include="img\portfolio_big_item_03.jpg" />
+    <Content Include="img\portfolio_big_item_04.jpg" />
+    <Content Include="img\portfolio_big_item_05.jpg" />
+    <Content Include="img\portfolio_big_item_06.jpg" />
+    <Content Include="img\portfolio_item_01.jpg" />
+    <Content Include="img\portfolio_item_02.jpg" />
+    <Content Include="img\portfolio_item_03.jpg" />
+    <Content Include="img\portfolio_item_04.jpg" />
+    <Content Include="img\portfolio_item_05.jpg" />
+    <Content Include="img\portfolio_item_06.jpg" />
+    <Content Include="img\prev.png" />
+    <Content Include="img\service_icon_01.png" />
+    <Content Include="img\service_icon_02.png" />
+    <Content Include="img\service_icon_03.png" />
+    <Content Include="img\service_icon_04.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -188,6 +226,13 @@
     <Content Include="App_Data\zg69.db" />
     <Content Include="App_Data\GeoLiteCityv6.dat" />
     <Content Include="App_Data\GeoLiteCity.dat" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -196,9 +241,25 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\plugins.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
+    <Content Include="Scripts\vendor\npm.js" />
+    <Content Include="Scripts\zeroModal.js" />
+    <Content Include="Scripts\zeroModal.min.js" />
+    <Content Include="template\zeroModal\img\close.png" />
+    <Content Include="template\zeroModal\img\loading1.gif" />
+    <Content Include="template\zeroModal\img\loading2.gif" />
+    <Content Include="template\zeroModal\img\max.png" />
+    <Content Include="template\zeroModal\img\min.png" />
+    <Content Include="template\zeroModal\index.html" />
+    <Content Include="template\zeroModal\lib\mustache.js" />
+    <Content Include="template\zeroModal\zeroModal.css" />
+    <Content Include="template\zeroModal\zeroModal.js" />
+    <Content Include="template\zeroModal\zeroModal.min.js" />
     <Content Include="template\产品\tops_97_Soft-Tech\assets\css\bootstrap-theme.min.css" />
     <Content Include="template\产品\tops_97_Soft-Tech\assets\css\bootstrap.min.css" />
     <Content Include="template\产品\tops_97_Soft-Tech\assets\css\plugins.css" />
@@ -231,7 +292,6 @@
     <Content Include="template\产品\tops_97_Soft-Tech\assets\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
     <Content Include="template\产品\tops_97_Soft-Tech\assets\js\vendor\npm.js" />
     <Content Include="template\产品\tops_97_Soft-Tech\index.html" />
-    <Content Include="template\产品\tops_97_Soft-Tech\说明.txt" />
     <Content Include="template\产品推广\tops_44_fame\asset\css\bootstrap-theme.css" />
     <Content Include="template\产品推广\tops_44_fame\asset\css\bootstrap-theme.min.css" />
     <Content Include="template\产品推广\tops_44_fame\asset\css\bootstrap.css" />
@@ -303,7 +363,6 @@
     <Content Include="template\产品推广\tops_44_fame\js\script.js" />
     <Content Include="template\产品推广\tops_44_fame\js\styleswitcher.js" />
     <Content Include="template\产品推广\tops_44_fame\mail\contact_me.php" />
-    <Content Include="template\产品推广\tops_44_fame\说明.txt" />
     <Content Include="template\公司首页\tpmo_506_tinker\css\bootstrap-theme.css" />
     <Content Include="template\公司首页\tpmo_506_tinker\css\bootstrap-theme.min.css" />
     <Content Include="template\公司首页\tpmo_506_tinker\css\bootstrap.css" />
@@ -351,7 +410,6 @@
     <Content Include="template\公司首页\tpmo_506_tinker\js\vendor\jquery-1.11.2.min.js" />
     <Content Include="template\公司首页\tpmo_506_tinker\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
     <Content Include="template\公司首页\tpmo_506_tinker\js\vendor\npm.js" />
-    <Content Include="template\公司首页\说明.txt" />
     <Content Include="template\商城\amz_02_adp\b.jpg" />
     <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\css\admin.css" />
     <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\css\amazeui.css" />
@@ -1054,7 +1112,6 @@
     <Content Include="template\外包\sbtp_28_bbd\js\jquery.jribbble-1.0.1.ugly.js" />
     <Content Include="template\外包\sbtp_28_bbd\js\jquery.nicescroll.min.js" />
     <Content Include="template\外包\sbtp_28_bbd\js\wow.min.js" />
-    <Content Include="template\外包\sbtp_28_bbd\说明.txt" />
     <Content Include="template\婚礼\frtp_5_photography\css\animate.min.css" />
     <Content Include="template\婚礼\frtp_5_photography\css\bootstrap.min.css" />
     <Content Include="template\婚礼\frtp_5_photography\css\font-awesome.min.css" />
@@ -1140,7 +1197,6 @@
     <Content Include="template\婚礼\frtp_5_photography\js\preloader.js" />
     <Content Include="template\婚礼\frtp_5_photography\js\smoothscroll.js" />
     <Content Include="template\婚礼\frtp_5_photography\js\wow.min.js" />
-    <Content Include="template\婚礼\说明.txt" />
     <Content Include="template\瑜伽\dntp_6_czv\about.html" />
     <Content Include="template\瑜伽\dntp_6_czv\contact.html" />
     <Content Include="template\瑜伽\dntp_6_czv\css\bootstrap-select.min.css" />
@@ -1231,7 +1287,6 @@
     <Content Include="template\瑜伽\dntp_6_czv\product-details.html" />
     <Content Include="template\瑜伽\dntp_6_czv\product.html" />
     <Content Include="template\瑜伽\dntp_6_czv\services.html" />
-    <Content Include="template\瑜伽\dntp_6_czv\说明.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1248,7 +1303,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="template\产品\tops_97_Soft-Tech\3000套网站模板免费拥有.url" />
     <Content Include="template\产品\tops_97_Soft-Tech\assets\css\bootstrap-theme.css.map" />
     <Content Include="template\产品\tops_97_Soft-Tech\assets\css\bootstrap.css.map" />
     <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\fontawesome-webfont.eot" />
@@ -1259,8 +1313,6 @@
     <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="template\产品\tops_97_Soft-Tech\assets\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="template\产品\tops_97_Soft-Tech\找网站模板就上【模板之家】cssMoban.com.url" />
-    <Content Include="template\产品推广\tops_44_fame\3000套网站模板免费拥有.url" />
     <Content Include="template\产品推广\tops_44_fame\asset\css\bootstrap-theme.css.map" />
     <Content Include="template\产品推广\tops_44_fame\asset\css\bootstrap.css.map" />
     <Content Include="template\产品推广\tops_44_fame\asset\fonts\glyphicons-halflings-regular.eot" />
@@ -1270,8 +1322,6 @@
     <Content Include="template\产品推广\tops_44_fame\fonts\fontawesome-webfont.ttf" />
     <Content Include="template\产品推广\tops_44_fame\fonts\fontawesome-webfont.woff" />
     <Content Include="template\产品推广\tops_44_fame\fonts\FontAwesome.otf" />
-    <Content Include="template\产品推广\tops_44_fame\找网站模板就上【模板之家】cssMoban.com.url" />
-    <Content Include="template\公司首页\3000套网站模板免费拥有.url" />
     <Content Include="template\公司首页\tpmo_506_tinker\css\bootstrap-theme.css.map" />
     <Content Include="template\公司首页\tpmo_506_tinker\css\bootstrap.css.map" />
     <Content Include="template\公司首页\tpmo_506_tinker\css\fonts\flexslider-icon.eot" />
@@ -1285,8 +1335,6 @@
     <Content Include="template\公司首页\tpmo_506_tinker\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="template\公司首页\tpmo_506_tinker\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="template\公司首页\tpmo_506_tinker\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="template\公司首页\找网站模板就上【模板之家】cssMoban.com.url" />
-    <Content Include="template\商城\3000套网站模板免费拥有.url" />
     <Content Include="template\商城\amz_02_adp\.project" />
     <Content Include="template\商城\amz_02_adp\one\.project" />
     <Content Include="template\商城\amz_02_adp\one\AmazeUI-2.4.2\assets\fonts\fontawesome-webfont.eot" />
@@ -1409,21 +1457,16 @@
     <Content Include="template\外包\sbtp_28_bbd\.git\refs\heads\master" />
     <Content Include="template\外包\sbtp_28_bbd\.git\refs\remotes\origin\gh-pages" />
     <Content Include="template\外包\sbtp_28_bbd\.git\refs\remotes\origin\master" />
-    <Content Include="template\外包\sbtp_28_bbd\3000套网站模板免费拥有.url" />
     <Content Include="template\外包\sbtp_28_bbd\fonts\Simple-Line-Icons.eot" />
     <Content Include="template\外包\sbtp_28_bbd\fonts\Simple-Line-Icons.ttf" />
     <Content Include="template\外包\sbtp_28_bbd\fonts\Simple-Line-Icons.woff" />
     <Content Include="template\外包\sbtp_28_bbd\img\.DS_Store" />
-    <Content Include="template\外包\sbtp_28_bbd\找网站模板就上【模板之家】cssMoban.com.url" />
-    <Content Include="template\婚礼\3000套网站模板免费拥有.url" />
     <Content Include="template\婚礼\frtp_5_photography\favicons\manifest.json" />
     <Content Include="template\婚礼\frtp_5_photography\fonts\fontawesome-webfontd41d.eot" />
     <Content Include="template\婚礼\frtp_5_photography\fonts\fontawesome-webfonte0a5.eot" />
     <Content Include="template\婚礼\frtp_5_photography\fonts\fontawesome-webfonte0a5.ttf" />
     <Content Include="template\婚礼\frtp_5_photography\fonts\fontawesome-webfonte0a5.woff" />
     <Content Include="template\婚礼\frtp_5_photography\fonts\fontawesome-webfonte0a5.woff2" />
-    <Content Include="template\婚礼\找网站模板就上【模板之家】cssMoban.com.url" />
-    <Content Include="template\瑜伽\dntp_6_czv\3000套网站模板免费拥有.url" />
     <Content Include="template\瑜伽\dntp_6_czv\css\fontawesome\fonts\fontawesome-webfont.eot" />
     <Content Include="template\瑜伽\dntp_6_czv\css\fontawesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="template\瑜伽\dntp_6_czv\css\fontawesome\fonts\fontawesome-webfont.woff" />
@@ -1435,7 +1478,6 @@
     <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\fonts\revicons\revicons.eot" />
     <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\fonts\revicons\revicons.ttf" />
     <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\fonts\revicons\revicons.woff" />
-    <Content Include="template\瑜伽\dntp_6_czv\找网站模板就上【模板之家】cssMoban.com.url" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="template\外包\sbtp_28_bbd\.git\media\objects\" />

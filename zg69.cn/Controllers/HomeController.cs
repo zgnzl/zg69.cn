@@ -6,18 +6,9 @@ using ZG69.Model;
 
 namespace zg69.cn.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : ILController
 
     {
-        public ActionResult Index()
-        {
-           string city= ResquestUtil.GetIpCity("101.54.63.4");
-           List<T_region> regions= DB.Context.From<T_region>().Where(c => c.Pinyin.Equals(city, System.StringComparison.CurrentCultureIgnoreCase)).ToList() ;
-            string cityname = "世外桃源";
-            if (regions.Count > 0)
-                cityname = regions[0].ShortName;
-            return View();
-        }
 
         public ActionResult About()
         {
@@ -31,6 +22,18 @@ namespace zg69.cn.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult MessageToUs(T_leavewords models)
+        {
+            models.UserIP = ip;
+            models.UserCity = pinyincity;
+            if (DB.Context.Insert<T_leavewords>(models) > 0)
+                return ObjResult(true, "我们已收到您的消息，感谢您的支持!");
+            else
+            {
+                return ObjResult(false, "服务器正在维护，暂时无法收到您的消息，请稍后再试，感谢您的支持！");
+            }
         }
     }
 }
