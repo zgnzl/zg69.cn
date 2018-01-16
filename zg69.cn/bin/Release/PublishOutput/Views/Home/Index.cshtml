@@ -1,0 +1,301 @@
+﻿@{
+    ViewBag.Title = "爱生活";
+}
+<style>
+    ol {
+        counter-reset: li;
+        list-style: none;
+        *list-style: decimal;
+        font: 13px 'trebuchet MS', 'lucida sans';
+        padding: 0;
+        margin-bottom: 4em;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    }
+
+    ol ol {
+        margin: 0 0 0 2em;
+    }
+
+    .rounded-list span {
+        position: relative;
+        display: block;
+        padding: .4em .4em .4em 2em;
+        *padding: .4em;
+        margin: .8em 0;
+        background: #ddd;
+        color: #444;
+        text-decoration: none;
+        border-radius: .3em;
+        transition: all .3s ease-out;
+    }
+
+        .rounded-list span:hover {
+            background: #eee;
+        }
+
+            .rounded-list span:hover:before {
+                transform: rotate(360deg);
+            }
+
+    .rounded-list span:before {
+        content: counter(li);
+        counter-increment: li;
+        position: absolute;
+        left: -1.3em;
+        top: 50%;
+        margin-top: -1.3em;
+        background: #87ceeb;
+        height: 2em;
+        width: 2em;
+        line-height: 2em;
+        border: .3em solid #fff;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 2em;
+        transition: all .3s ease-out;
+    }
+</style>
+<div class="parallax-content baner-content" id="home">
+    <div class="container">
+        <div class="text-content">
+            <h2>69让 <span>生活</span> 越来越 <em>美好</em></h2>
+            <p style="padding: 0px 15%;">69生活网致力于服务城乡居民的生活服务网，网站提供农牧民自己产的各种天然纯绿色农牧产品，并附带生活中各类便民服务信息，义务为使用生活网的商家提供技术与数据支持 。</p>
+            <div class="primary-white-button">
+                <a href="#" class="scroll-link" data-id="about">了解更多</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section id="about" class="page-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="img/service_icon_01.png" alt="">
+                    </div>
+                    <h4>生活服务</h4>
+                    <div class="line-dec"></div>
+                    <p>为您提供房产、招聘、黄页、团购、交友、二手、宠物、车辆、周边游等海量分类信息服务</p>
+                    <div class="primary-blue-button">
+                        <a href="#" class="scroll-link" data-id="portfolio">了解更多</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="img/service_icon_02.png" alt="">
+                    </div>
+                    <h4>农牧产品</h4>
+                    <div class="line-dec"></div>
+                    <p>为您提供来自阿尔巴斯农牧民家族的最鲜、最嫩、最安全的牛羊肉以及其他衍生产品如奶酪、风干肉等</p>
+                    <div class="primary-blue-button">
+                        <a href="#" class="scroll-link" data-id="portfolio">了解更多</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="img/service_icon_03.png" alt="">
+                    </div>
+                    <h4>最新咨询</h4>
+                    <div class="line-dec"></div>
+                    <p>这里将提供生活网服务类信息的最新咨询，涵盖最新产品类信息、政策类信息、生活相关的其他最新咨询信息等</p>
+                    <div class="primary-blue-button">
+                        <a href="#" class="scroll-link" data-id="portfolio">了解更多</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-item">
+                    <div class="icon">
+                        <img src="img/service_icon_04.png" alt="">
+                    </div>
+                    <h4>常用工具</h4>
+                    <div class="line-dec"></div>
+                    <p>主要提供与产品技术，服务技术相关的常用工具以及生活网开源的部分工具集源代码等</p>
+                    <div class="primary-blue-button">
+                        <a href="#" class="scroll-link" data-id="portfolio">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <div class="content-wrapper">
+        <div class="inner-container container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="section-heading">
+                        <h4>推荐产品</h4>
+                        <div class="line-dec"></div>
+                        <p>@DateTime.Now.AddYears(-1).Year 年最受欢迎产品如下:</p>
+                        <div class="filter-categories">
+                            <ul class="project-filter">
+                                <li class="filter" data-filter="all"><span>全部推荐</span></li>
+                                <li class="filter" data-filter="branding"><span>阿尔巴斯牛肉</span></li>
+                                <li class="filter" data-filter="graphic"><span>阿尔巴斯羊肉</span></li>
+                                <li class="filter" data-filter="nature"><span>阿尔巴斯奶皮</span></li>
+                                <li class="filter" data-filter="animation"><span>阿尔巴斯风干肉</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="projects-holder-3">
+                        <div class="projects-holder">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 project-item mix nature">
+                                    <div class="thumb">
+                                        <div class="image">
+                                            <a href="img/portfolio_big_item_01.jpg" data-lightbox="image-1"><img src="img/portfolio_item_01.jpg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 project-item mix animation">
+                                    <div class="thumb">
+                                        <div class="image">
+                                            <a href="img/portfolio_big_item_02.jpg" data-lightbox="image-1"><img src="img/portfolio_item_02.jpg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 project-item mix branding">
+                                    <div class="thumb">
+                                        <div class="image">
+                                            <a href="img/portfolio_big_item_03.jpg" data-lightbox="image-1"><img src="img/portfolio_item_03.jpg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 project-item mix graphic nature">
+                                    <div class="thumb">
+                                        <div class="image">
+                                            <a href="img/portfolio_big_item_04.jpg" data-lightbox="image-1"><img src="img/portfolio_item_04.jpg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 project-item mix branding">
+                                    <div class="thumb">
+                                        <div class="image">
+                                            <a href="img/portfolio_big_item_05.jpg" data-lightbox="image-1"><img src="img/portfolio_item_05.jpg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 project-item mix graphic animation">
+                                    <div class="thumb">
+                                        <div class="image">
+                                            <a href="img/portfolio_big_item_06.jpg" data-lightbox="image-1"><img src="img/portfolio_item_06.jpg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div id="owl-testimonials" class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="testimonials-item">
+                            <p>熟悉信息检索基本概念，具有数据库系统优化，搜索排序优化等方面的相关实践经验，具有分布式计算平台（Spark/Hadoop/Hive）相关经验者优先。</p>
+                            <h4>生活服务</h4>
+                            <span>牧业科技-研发工程师</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonials-item">
+                            <p>最新上架今年预备风干牛羊肉，需要的请抓紧时间订购，订购电话15011165011</p>
+                            <h4>农牧产品</h4>
+                            <span>风干牛肉干</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonials-item">
+                            <p>随着城市化越来越高，农村人口不断迁入城市安家落户，农村土地就荒芜无人耕种的有很多，但有些农民要土地耕种的却无地，2018年是农村土地改革的后面一年，为了能最有效利用土地，有部分土地会被收回重新处理。</p>
+                            <h4>最新资讯</h4>
+                            <span>土地改革</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonials-item">
+                            <p>最新上架IP地址查询功能，可以查询您当前使用设备的IP地址及其该IP所属城市</p>
+                            <h4>常用工具</h4>
+                            <span>IP地址查询</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="tabs-content" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="wrapper">
+                <div class="col-md-4">
+                    <div class="section-heading">
+                        <h4>农牧民生活</h4>
+                        <div class="line-dec"></div>
+                        <p>点击记录农牧民现实生活的一角，真实再现农牧区生活原貌</p>
+                        <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+                            <li><a href="#tab1" class="active">丑丑与美美</a></li>
+                            <li><a href="#tab2">聂小千会客室</a></li>
+                            <li><a href="#tab3">随风背影</a></li>
+                            <li><a href="#tab4">聂风日常</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <section id="first-tab-group" class="tabgroup">
+                        <div id="tab1">
+                            <img src="img/blog_item_01.jpg" alt="">
+                            <div class="text-content">
+                                <h4>Lorem ipsum dolor sit amet</h4>
+                                <span><a href="#">Digital Marketing</a> / <a href="#">John</a> / <a href="#">22 September 2017</a></span>
+                                <p>Sed sed elementum diam. Nunc vehicula leo et ante dapibus tincidunt. Praesent fringilla mauris gravida enim laoreet, eu cursus erat dignissim. Praesent lacinia, nisi in suscipit commodo, risus elit viverra neque, ut pretium eros turpis vel enim. Maecenas vitae lacus purus.</p>
+                            </div>
+                        </div>
+                        <div id="tab2">
+                            <img src="img/blog_item_02.jpg" alt="">
+                            <div class="text-content">
+                                <h4>Quisque ultricies maximus</h4>
+                                <span><a href="#">Branding</a> / <a href="#">David</a> / <a href="#">14 September 2017</a></span>
+                                <p> Quisque eget congue orci. Integer et eros diam. Curabitur aliquam nisi ornare turpis tristique tincidunt ut ut orci. Phasellus orci nisi, varius sed lacinia et, pulvinar quis est. Curabitur a tincidunt tortor. Cras rhoncus sodales massa sagittis malesuada.</p>
+                            </div>
+                        </div>
+                        <div id="tab3">
+                            <img src="img/blog_item_03.jpg" alt="">
+                            <div class="text-content">
+                                <h4>Sed vel elit et lorem</h4>
+                                <span><a href="#">Web Design</a> / <a href="#">Jacky</a> / <a href="#">25 August 2017</a></span>
+                                <p>Cras sodales, magna non ultrices pellentesque, ligula dui viverra nunc, vitae scelerisque arcu tortor nec nibh. Proin tempor vel nisi et sagittis. Morbi ut sagittis orci, a pretium diam. Nullam sed bibendum turpis. Fusce eget dapibus lectus. Vestibulum ac malesuada lacus, eu vulputate sapien. Sed vel elit et lorem cursus dignissim sed sit amet arcu.</p>
+                            </div>
+                        </div>
+                        <div id="tab4">
+                            <img src="img/blog_item_04.jpg" alt="">
+                            <div class="text-content">
+                                <h4>Vivamus purus neque</h4>
+                                <span><a href="#">E-Commerce</a> / <a href="#">John</a> / <a href="#">12 August 2017</a></span>
+                                <p>Aliquam erat volutpat. Nulla at nunc nec ante rutrum congue id in diam. Nulla at lectus non turpis placerat volutpat lacinia ut mi. Quisque ultricies maximus justo a blandit. Donec sit amet commodo arcu. Sed sit amet iaculis mi, vel fermentum nisi. Morbi dui enim, vestibulum non accumsan ac, tempor non nisl.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
