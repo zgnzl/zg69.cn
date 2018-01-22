@@ -166,6 +166,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ILController.cs" />
+    <Compile Include="Controllers\LCController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -182,9 +183,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fontAwesome.css" />
     <Content Include="Content\hero-slider.css" />
+    <Content Include="Content\lc\style.css" />
     <Content Include="Content\lightbox.css" />
     <Content Include="Content\owl-carousel.css" />
     <Content Include="Content\templatemo-style.css" />
+    <Content Include="Content\webuploader.css" />
     <Content Include="Content\zeroModal.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -199,6 +202,20 @@
     <Content Include="img\blog_item_03.jpg" />
     <Content Include="img\blog_item_04.jpg" />
     <Content Include="img\close.png" />
+    <Content Include="img\LC\20180120\1.jpg" />
+    <Content Include="img\LC\20180120\10.jpg" />
+    <Content Include="img\LC\20180120\11.jpg" />
+    <Content Include="img\LC\20180120\12.jpg" />
+    <Content Include="img\LC\20180120\2.jpeg" />
+    <Content Include="img\LC\20180120\2.jpg" />
+    <Content Include="img\LC\20180120\3.jpg" />
+    <Content Include="img\LC\20180120\4.jpg" />
+    <Content Include="img\LC\20180120\5.jpg" />
+    <Content Include="img\LC\20180120\6.jpg" />
+    <Content Include="img\LC\20180120\7.jpg" />
+    <Content Include="img\LC\20180120\8.jpg" />
+    <Content Include="img\LC\20180120\9.jpg" />
+    <Content Include="img\LC\bg.jpg" />
     <Content Include="img\loading.gif" />
     <Content Include="img\next.png" />
     <Content Include="img\portfolio_big_item_01.jpg" />
@@ -242,6 +259,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\LC\ge1doot.js" />
+    <Content Include="Scripts\LC\imageTransform3D.js" />
+    <Content Include="Scripts\LC\upload.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\plugins.js" />
@@ -249,6 +269,8 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
     <Content Include="Scripts\vendor\npm.js" />
+    <Content Include="Scripts\webuploader.js" />
+    <Content Include="Scripts\webuploader.min.js" />
     <Content Include="Scripts\zeroModal.js" />
     <Content Include="Scripts\zeroModal.min.js" />
     <Content Include="template\zeroModal\img\close.png" />
@@ -1479,8 +1501,12 @@
     <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\fonts\revicons\revicons.eot" />
     <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\fonts\revicons\revicons.ttf" />
     <Content Include="template\瑜伽\dntp_6_czv\plugins\revolution\revolution\fonts\revicons\revicons.woff" />
+    <Content Include="Views\LC\Index.cshtml" />
+    <Content Include="Views\LC\Img.cshtml" />
+    <Content Include="Views\LC\UploadFile.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Files\" />
     <Folder Include="template\外包\sbtp_28_bbd\.git\media\objects\" />
     <Folder Include="template\外包\sbtp_28_bbd\.git\media\tmp\" />
     <Folder Include="template\外包\sbtp_28_bbd\.git\objects\info\" />
