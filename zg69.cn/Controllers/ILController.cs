@@ -23,7 +23,7 @@ namespace zg69.cn.Controllers
             DB.Context.Insert<T_visitor>(model);
         }
 
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
             Init();
             string cityname = ConvertPinYinToHanZi(pinyincity);
@@ -37,7 +37,7 @@ namespace zg69.cn.Controllers
             List<T_region> regions = DB.Context.From<T_region>().Where(c => c.Pinyin.Equals(pinyin, System.StringComparison.CurrentCultureIgnoreCase)).ToList();
             if (regions.Count > 0)
                return  regions[0].ShortName;
-            return "世外桃源";
+            return "未知";
         }
 
         public ActionResult ObjResult(bool result, object message)

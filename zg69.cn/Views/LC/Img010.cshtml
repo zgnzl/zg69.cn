@@ -1,0 +1,144 @@
+﻿@{
+    Layout = null;
+    List<string> filelist = ViewBag.filelist;
+}
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>第一届凉城老乡在京聚会照片</title>
+    <!-- js_error begin -->
+    <script language="javascript">
+<!--
+        window.onerror = function () { return true; }
+        // -->
+    </script>
+    <!-- js_error end -->
+    <!-- 去掉这3行，则点击直接显示原图，如果移动至下面则IE浏览器报错 begin -->
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/LC/jquery.scripts.js"></script>
+    <script type="text/javascript" src="~/Scripts/LC/jquery.custom.js"></script>
+    <!-- 去掉这3行，则点击直接显示原图，如果移动至下面则IE浏览器报错 end -->
+
+    <link rel="stylesheet" type="text/css" media="all" href="~/Content/lc/style.min.css" />
+
+</head>
+<body>
+
+    <div id="slideshow-wrapper">
+        <div id="slideshow-pattern" class="subheader-pattern-dot"></div>
+        <div id="slideshow-border-top">
+            <div id="gallery-slider-wrapper">
+                <div id="gallery-slider">
+                    <div id="slider-controls"><a href="javascript: void(0)" id="slider-control-left">left</a><a href="javascript: void(0)" id="slider-control-right">right</a></div>
+                    <div id="slider-images-wrapper">
+                        <ul id="slider-main-ul" style="width: 4160px; left: -460px;">
+                            @for (int i = 0; i < filelist.Count; i = i + 9)
+                            {
+                                <!-- 3dwall_011 begin -->
+                                <li>
+                                    <ul>
+                                        <li class="type-3"><a class="image-icon" rel="gallery[modal]" href="javascript:void(0)" style="display: block;"><span style="visibility: hidden; zoom: 1; opacity: 0;"><div class="icon"></div><strong>在京商会第一次聚会</strong>2018年01月22 红色盛宴<em class="more">查看大图 »</em></span><img height="298" width="318" src="@Url.Content("~/img/lc/20180120/" + filelist[i + 0])" alt="请查看图片" /></a></li>
+                                        @if (i + 1 >= filelist.Count)
+                                        { break; }
+                                        <li class="type-1"><a class="image-icon" rel="gallery[modal]" href="javascript:void(0)" style="display: block;"><span style="visibility: hidden; zoom: 1; opacity: 0;"><div class="icon"></div><strong>在京商会第一次聚会</strong>2018年01月22 红色盛宴<em class="more">查看大图 »</em></span><img height="148" width="158" src="@Url.Content("~/img/lc/20180120/" + filelist[i + 1])" alt="请查看图片" /></a></li>
+
+                                        @if (i + 2 >= filelist.Count)
+                                        { break; }
+                                        <li class="type-1"><a class="image-icon" rel="gallery[modal]" href="javascript:void(0)" style="display: block;"><span style="visibility: hidden; zoom: 1; opacity: 0;"><div class="icon"></div><strong>在京商会第一次聚会</strong>2018年01月22 红色盛宴<em class="more">查看大图 »</em></span><img height="148" width="158" src="@Url.Content("~/img/lc/20180120/" + filelist[i + 2])" alt="请查看图片" /></a></li>
+
+                                    </ul>
+                                </li>
+                                <!-- 3dwall_011 end -->
+                                <!-- 3dwall_012 begin -->
+                                <li>
+                                    <ul>
+                                        @if (i + 3 >= filelist.Count)
+                                        { break; }
+                                        <li class="type-1"><a class="image-icon" rel="gallery[modal]" href="javascript:void(0)" style="display: block;"><span style="visibility: hidden; zoom: 1; opacity: 0;"><div class="icon"></div><strong>在京商会第一次聚会</strong>2018年01月22 红色盛宴<em class="more">查看大图 »</em></span><img height="148" width="158" src="@Url.Content("~/img/lc/20180120/" + filelist[i + 3])" alt="请查看图片" /></a></li>
+
+
+                                        @if (i + 4 >= filelist.Count)
+                                        { break; }
+                                        <li class="type-1"><a class="image-icon" rel="gallery[modal]" href="javascript:void(0)" style="display: block;"><span style="visibility: hidden; zoom: 1; opacity: 0;"><div class="icon"></div><strong>在京商会第一次聚会</strong>2018年01月22 红色盛宴<em class="more">查看大图 »</em></span><img height="148" width="158" src="@Url.Content("~/img/lc/20180120/" + filelist[i + 4])" alt="请查看图片" /></a></li>
+
+                                        @if (i + 5 >= filelist.Count)
+                                        { break; }
+                                        <li class="type-2"><a class="image-icon" rel="gallery[modal]" href="javascript:void(0)" style="display: block;"><span style="visibility: hidden; zoom: 1; opacity: 0;"><div class="icon"></div><strong>在京商会第一次聚会</strong>2018年01月22 红色盛宴<em class="more">查看大图 »</em></span><img height="148" width="318" src="@Url.Content("~/img/lc/20180120/" + filelist[i + 5])" alt="请查看图片" /></a></li>
+
+                                        @if (i + 6 >= filelist.Count)
+                                        { break; }
+                                        <li class="type-2"><a class="image-icon" rel="gallery[modal]" href="javascript:void(0)" style="display: block;"><span style="visibility: hidden; zoom: 1; opacity: 0;"><div class="icon"></div><strong>在京商会第一次聚会</strong>2018年01月22 红色盛宴<em class="more">查看大图 »</em></span><img height="148" width="318" src="@Url.Content("~/img/lc/20180120/" + filelist[i + 6])" alt="请查看图片" /></a></li>
+
+                                    </ul>
+                                </li>
+                                <!-- 3dwall_012 end -->
+                                <!-- 3dwall_013 begin -->
+                                <li>
+                                    <ul>
+                                        @if (i + 7 >= filelist.Count)
+                                        { break; }
+                                        <li class="type-2"><a class="image-icon" rel="gallery[modal]" href="javascript:void(0)" style="display: block;"><span style="visibility: hidden; zoom: 1; opacity: 0;"><div class="icon"></div><strong>在京商会第一次聚会</strong>2018年01月22 红色盛宴<em class="more">查看大图 »</em></span><img height="148" width="318" src="@Url.Content("~/img/lc/20180120/" + filelist[i + 7])" alt="请查看图片" /></a></li>
+
+                                        @if (i + 8 >= filelist.Count)
+                                        { break; }
+                                        <li class="type-3"><a class="image-icon" rel="gallery[modal]" href="javascript:void(0)" style="display: block;"><span style="visibility: hidden; zoom: 1; opacity: 0;"><div class="icon"></div><strong>在京商会第一次聚会</strong>2018年01月22 红色盛宴<em class="more">查看大图 »</em></span><img height="298" width="318" src="@Url.Content("~/img/lc/20180120/" + filelist[i + 8])" alt="请查看图片" /></a></li>
+
+                                    </ul>
+                                </li>
+                                <!-- 3dwall_013 end -->
+                            }
+
+                        </ul>
+
+                    </div>
+                    <div id="slider-bottom-controls"><a id="slider-scroll-left" href="javascript: void(0);" title="">left</a><div id="slider-scroll"><div class="knob" style="width: 92px; position: relative; left: 184px;"></div></div><a id="slider-scroll-right" href="javascript: void(0);" title="">right</a></div>
+                </div>
+            </div>
+            <!-- end of slideshow border top -->
+        </div>
+        <!-- end of slideshow wrapper -->
+    </div>
+
+    <script type="text/javascript" src="~/Scripts/LC/mootools.js"></script>
+    <script type="text/javascript" src="~/Scripts/LC/duotive-slider-gallery.js"></script>
+
+    <script type="text/javascript">
+        //首页banner图展示init
+        window.addEvent("load", function () {
+            var dtSlideshow = new dtSliderGallery({ container: $("gallery-slider"), arrowControls: 1, description: 1, transitionDuration: 1000, transitionInterval: 15000 });
+        });
+               /** 无限滚动
+               function getTmplData() {
+                    jQuery.get("/web/idol/rest/" + jQuery('#pageNo').val() + "/0",
+                        function(data) {
+                            for (var i = 0; i < data.items.length; i++ ) {
+                                jQuery('#idol_tmpl').tmpl(data.items[i]).appendTo('#main_container');
+                            }
+
+                            jQuery('#pageNo').val(parseInt(jQuery('#pageNo').val()) + 1);
+                   });
+               }
+
+                jQuery(window).bind("scroll",function() {
+                     然后判断窗口的滚动条是否接近页面底部
+                    if (jQuery(document).scrollTop() + jQuery(window).height() > jQuery(document).height() - 20) {
+                        if (jQuery('#pageNo').val() < 3) {
+                            getTmplData();
+                        }
+                    }
+                }) **/
+    </script>
+    <div style="text-align:center;margin-top:30px">
+        <p>
+            本网页版权 凉城在京商会
+            <br />
+            本网站由<a style="color:brown" href="http://zgztxh.com/">北京中泰祥和科技有限公司</a>提供技术支持与服务
+        </p>
+    </div>
+</body>
+</html>
+

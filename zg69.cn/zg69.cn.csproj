@@ -170,6 +170,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\C_Models.cs" />
     <Compile Include="Models\T_leavewords.cs" />
     <Compile Include="Models\T_region.cs" />
     <Compile Include="Models\T_users.cs" />
@@ -184,6 +185,7 @@
     <Content Include="Content\fontAwesome.css" />
     <Content Include="Content\hero-slider.css" />
     <Content Include="Content\lc\style.css" />
+    <Content Include="Content\lc\style.min.css" />
     <Content Include="Content\lightbox.css" />
     <Content Include="Content\owl-carousel.css" />
     <Content Include="Content\templatemo-style.css" />
@@ -216,6 +218,9 @@
     <Content Include="img\LC\20180120\8.jpg" />
     <Content Include="img\LC\20180120\9.jpg" />
     <Content Include="img\LC\bg.jpg" />
+    <Content Include="img\LC\gallery-slider-control-left.png" />
+    <Content Include="img\LC\gallery-slider-control-right.png" />
+    <Content Include="img\LC\gallery-slider-scroll-handle.png" />
     <Content Include="img\loading.gif" />
     <Content Include="img\next.png" />
     <Content Include="img\portfolio_big_item_01.jpg" />
@@ -259,8 +264,12 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\LC\duotive-slider-gallery.js" />
     <Content Include="Scripts\LC\ge1doot.js" />
     <Content Include="Scripts\LC\imageTransform3D.js" />
+    <Content Include="Scripts\LC\jquery.custom.js" />
+    <Content Include="Scripts\LC\jquery.scripts.js" />
+    <Content Include="Scripts\LC\mootools.js" />
     <Content Include="Scripts\LC\upload.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
@@ -1504,6 +1513,7 @@
     <Content Include="Views\LC\Index.cshtml" />
     <Content Include="Views\LC\Img.cshtml" />
     <Content Include="Views\LC\UploadFile.cshtml" />
+    <Content Include="Views\LC\Img010.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Files\" />
