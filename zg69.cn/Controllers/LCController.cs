@@ -28,6 +28,16 @@ namespace zg69.cn.Controllers
             return base.Index();
         }
 
+        public ActionResult GetCityByIP(string ip)
+        {
+            string result = RequestUtil.GetIpCity(ip);
+            List<T_region> regions = DB.Context.From<T_region>().Where(c => c.Pinyin.Equals(result, System.StringComparison.CurrentCultureIgnoreCase)).ToList();
+           Response.AddHeader("Access-Control-Allow-Origin","*");
+            if (regions.Count > 0)
+                result = regions[0].MergerName;
+            return Content(result);
+        }
+
         public ActionResult Img(string pwd)
         {
             string view = "";
